@@ -34,7 +34,6 @@
                                     <h3><a href="{{ route('post.show', $rpost->slug) }}">{{ $rpost->judul }}</a></h3>
                                     <ul class="blog-thumb-info">
                                         <li><i class="bi bi-calendar"></i> {{ $rpost->tanggal }}</li>
-                                        <li><i class="bi bi-clock"></i> {{ $rpost->jam }} WIB</li>
                                     </ul>
                                 </div>
                             </div>

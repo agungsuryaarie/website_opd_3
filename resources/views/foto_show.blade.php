@@ -1,34 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="section-content">
-        <div class="container-f mb-30">
-            <div class="text-center margin-bottom-50">
-                <h2 class="title-v2 title-center">{{ $foto->judul }}</h2>
-            </div>
-
-            <div class="row  margin-bottom-30">
-                @foreach ($detail as $d)
-                    <div class="col-sm-3 sm-margin-bottom-30">
-                        <a href="{{ url('storage/foto/' . $d->foto) }}" rel="gallery2" class="fancybox img-hover-v1"
-                            title="Image 1">
-                            <span>
-                                <img class="img-responsive" src="{{ url('storage/foto/' . $d->foto) }}" alt="">
-                            </span>
-                        </a>
-                    </div>
-                @endforeach
+    <section id="portfolio" class="portfolio section-content">
+        <div class="container-f" data-aos="fade-up">
+            <div class="shadow-lg p-4">
+                <div class="section-title">
+                    <h4>{{ $foto->judul }} </h4>
+                </div>
+                <div class="row portfolio-container">
+                    @foreach ($detail as $d)
+                        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                                <img src="{{ url('storage/foto/' . $d->foto) }}" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="{{ url('storage/foto/' . $d->foto) }}" data-gallery="portfolioGallery"
+                                        class="portfolio-lightbox" title=""><i class="bx bx-zoom-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
-    </div>
-@endsection
-
-@section('script')
-    <script>
-        jquery(document).ready(function() {
-            App.init();
-            FancyBox.initFancybox();
-            StyleSwitcher.initStyleSwitcher();
-        });
-    </script>
+    </section>
 @endsection

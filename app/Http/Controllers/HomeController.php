@@ -16,7 +16,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $title = 'Badan Penangulangan Bencana Daerah | Kabupaten Batu Bara';
+        $title = 'Website Resmi Dinas Perumahan, Kawasan Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
         $slideshow = Slideshow::orderBy('id', 'desc')->limit(3)->get();
         // $posts = Berita::orderBy('id', 'desc')->limit(3)->get();
         $link = Link::orderBy('id', 'desc')->get();

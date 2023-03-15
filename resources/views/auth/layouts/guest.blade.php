@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Form Login | Website Resmi BPBD Kabupaten Batu bara</title>
+    <title>Form Login | Website Resmi Dinas Perumahan, Kawasan Permukiman dan Lingkungan Hidup | Kabupaten Batu bara
+    </title>
 
     <!-- Favicons -->
     <link href="{{ url('front/img/logo.png') }}" rel="icon">

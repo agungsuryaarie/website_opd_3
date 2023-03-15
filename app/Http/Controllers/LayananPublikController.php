@@ -13,7 +13,7 @@ class LayananPublikController extends Controller
 {
     public function index($slug)
     {
-        $title = 'Badan Penangulangan Bencana Daerah | Kabupaten Batu Bara';
+        $title = 'Layanan - Website Resmi Dinas Perumahan, Kawasan Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
         $layanan = Layanan::orderBy('id')->get();
         $lapub = Layanan::where('slug', $slug)->orderBy('id')->first();
         $recent_post = Berita::limit(4)->get();

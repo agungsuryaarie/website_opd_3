@@ -9,8 +9,8 @@
 [Import Global Compulsory CSS Files]
 ----------------------------------------------------*/
 
-@import url(app.css);
-@import url(plugins/style-switcher.css);
+/* @import url(app.css);
+@import url(plugins/style-switcher.css); */
 
 @media (min-width: 768px) {
 	.g-blur { overflow: hidden; }
@@ -29,11 +29,6 @@
 /*--------------------------------------------------
 [Blog Styles]
 ----------------------------------------------------*/
-body {
-	color: #333;
-	/* font: 13px/1.6 'Roboto Slab', sans-serif; */
-	text-rendering: optimizelegibility;
-}
 
 body.header-fixed-space-v2 {
 	padding-top: 135px;
@@ -739,7 +734,7 @@ body.header-fixed-space-v2 {
 .blog-thumb-v2 .blog-thumb-desc h3 {
 	font-size: 14px;
 	margin: 0 0 5px;
-	font-weight: 400;
+	font-weight: 500;
 	line-height: 1.4;
 }
 

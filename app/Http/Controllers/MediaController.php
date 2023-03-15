@@ -16,7 +16,7 @@ class MediaController extends Controller
 {
     public function index()
     {
-        $title = 'Badan Penangulangan Bencana Daerah | Kabupaten Batu Bara';
+        $title = 'Galeri Foto - Website Resmi Dinas Perumahan, Kawasan Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
         $foto = Galeri::orderBy('id', 'desc')->latest()->paginate(9);
         $halaman = Halaman::orderBy('id', 'asc')->get();
         $layanan = Layanan::orderBy('id', 'asc')->get();
@@ -26,7 +26,7 @@ class MediaController extends Controller
 
     public function show($id)
     {
-        $title = 'Badan Penangulangan Bencana Daerah | Kabupaten Batu Bara';
+        $title = 'Galeri Foto - Website Resmi Dinas Perumahan, Kawasan Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
         $foto = Galeri::orderBy('id', 'desc')->first();
         $detail = Foto::where('galeri_id', $id)->get();
         $halaman = Halaman::orderBy('id', 'asc')->get();
@@ -37,7 +37,7 @@ class MediaController extends Controller
 
     public function video()
     {
-        $title = 'Badan Penangulangan Bencana Daerah | Kabupaten Batu Bara';
+        $title = 'Video - Website Resmi Dinas Perumahan, Kawasan Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
         $video = Video::orderBy('id', 'desc')->latest()->paginate(9);
         $halaman = Halaman::orderBy('id', 'asc')->get();
         $layanan = Layanan::orderBy('id', 'asc')->get();
@@ -46,12 +46,13 @@ class MediaController extends Controller
     }
     public function showv(Video $video)
     {
-        $title = 'Badan Penangulangan Bencana Daerah | Kabupaten Batu Bara';
+        $title = 'Video - Website Resmi Dinas Perumahan, Kawasan Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
         $halaman = Halaman::orderBy('id', 'asc')->get();
         $layanan = Layanan::orderBy('id', 'asc')->get();
-        $recent_post = Berita::limit(4)->get();
+        $other_post = Berita::orderBy('id', 'desc')->get();
+        $other_video = Video::limit(4)->get();
         $banner = Banner::orderBy('id', 'desc')->limit(1)->get();
         $setting = Setting::first();
-        return view('video_show', compact('title', 'video', 'halaman', 'recent_post', 'layanan', 'banner', 'setting'));
+        return view('video_show', compact('title', 'video', 'halaman', 'other_post', 'layanan', 'banner', 'setting', 'other_video'));
     }
 }

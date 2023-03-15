@@ -62,7 +62,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-4 col-md-6 footer-newsletter">
+                <div class="col-lg-4 col-md-6 footer-links">
                     <h4>Kontak Kami</h4>
                     <p><i class="bi bi-house-fill"></i> {{ $setting->alamat }}</p>
                     <p><i class="bi bi-telephone-inbound-fill"></i> {{ $setting->telepon }}</p>
@@ -72,12 +72,11 @@
         </div>
     </div>
 
-    <div class="container">
-
+    <div class="container-f">
         <div class="copyright-wrap d-md-flex py-4">
             <div class="me-md-auto text-center text-md-start">
                 <div class="copyright">
-                    Copyright &copy; <span>{{ $setting->nama_instansi }}</span>. All Rights Reserved
+                    Copyright &copy; <span>{{ $setting->nama_instansi }}</span>
                 </div>
             </div>
             <div class="social-links text-center text-md-right pt-3 pt-md-0">
@@ -93,16 +92,17 @@
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
-<div id="preloader"></div>
+
+<div id="preloader">
+    <div class="line"></div>
+</div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
     integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-</script>
+<script src="{{ url('front/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- Vendor JS Files -->
 <script src="{{ url('front/vendor/purecounter/purecounter_vanilla.js') }}"></script>
 <script src="{{ url('front/vendor/aos/aos.js') }}"></script>
@@ -110,11 +110,6 @@
 <script src="{{ url('front/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 <script src="{{ url('front/vendor/swiper/swiper-bundle.min.js') }}"></script>
 <script src="{{ url('front/vendor/php-email-form/validate.js') }}"></script>
-<script src="{{ url('front/js/app.js') }}"></script>
-{{-- <script src="{{ url('front/fancybox/source/jquery.fancybox.js') }}"></script>
-<script src="{{ url('front/fancybox/source/jquery.fancybox.pack.js') }}"></script> --}}
-<script src="{{ url('front/js/style-switcher.js') }}"></script>
-
 <!-- Template Main JS File -->
 <script src="{{ url('front/js/main.js') }}"></script>
 <script src="{{ url('front/DataTables/datatables.min.js') }}"></script>

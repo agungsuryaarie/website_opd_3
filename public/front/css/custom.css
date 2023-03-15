@@ -1,5 +1,5 @@
 .slideshow{
-    padding-top: 81px;
+    padding-top: 82px;
 }
 
 .section-content{
@@ -57,13 +57,28 @@
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0 15px rgb(0 0 0 / 5%);
     border-radius: 10px;
-    /* padding: 17px 18px 17px; */
-    /* padding: 30px; */
     align-self: normal;
 }
 
 .recent-post{
   padding: 20px;
+}
+.recent-post h4{
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  padding-left: 12px;
+ margin-bottom: 30px;
+}
+.recent-post h4::before{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -1px;
+  height: 100%;
+  width: 3px;
+  background: #3616ea;
 }
 
 .recent-news{
@@ -104,7 +119,6 @@
     box-shadow: 0 0 15px rgb(0 0 0 / 5%);
     border-radius: 15px;
     padding: 17px 18px 17px;
-    /* padding: 30px; */
     align-self: normal;
 }
 
@@ -172,8 +186,8 @@ margin: 0 auto 25px;
 }
 
 .cardpokersize h3{
-font-size: 17px;
-font-weight: 600;
+font-size: 16px;
+font-weight: 500;
 color: #3f3975;
 margin-bottom: 1em;
 }
@@ -200,14 +214,14 @@ color: #1850ca;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .card-image {
-  flex: 0 1 15rem;
+  flex: 0 1 17rem;
   display: flex;
   align-items: center;
-  margin: 20px 18px 44px;
+  margin: 20px 13px 10px;
   flex-direction: column;
   background: #fff;
   transition: all 0.3s ease-in-out;
@@ -217,10 +231,10 @@ color: #1850ca;
 
 .card-image img {
 width: 100%;
-/* height: 155px; */
+height: 185px;
 object-fit: cover;
 transition: 0.5s;
-object-position: center;
+object-position: top;
 margin: 0 auto 10px;
 }
 
@@ -241,6 +255,31 @@ font-size: 14px;
 text-align: center;
 }
 
+@media  (max-width: 576px){
+  .card-image img  {
+     height: auto;;
+    }
+  .card-image  {
+    flex: 0 1 19rem;
+    }
+  .row-image  {
+     justify-content: center;;
+    }
+  }
+
+  @media  (max-width: 768px){
+    .card-image img  {
+      height: auto;;
+     }
+     .card-image  {
+      flex: 0 1 19rem;
+      }
+     .row-image  {
+      justify-content: center;
+     }
+    }
+
+ 
 .video-responsive{
   width: 100%;
   height: 400px;
@@ -288,7 +327,7 @@ text-align: center;
 
     position: relative;
     margin: 0;
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 15px;
    font-family: Poppins,Helvetica,sans-serif;
     line-height: 35px;

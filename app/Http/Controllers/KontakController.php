@@ -11,7 +11,7 @@ class KontakController extends Controller
 {
     public function index()
     {
-        $title = 'Badan Penangulangan Bencana Daerah | Kabupaten Batu Bara';
+        $title = 'Kontak - Website Resmi Dinas Perumahan, Kawasan Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
         $setting = Setting::first();
         $halaman = Halaman::orderBy('id', 'asc')->get();
         $layanan = Layanan::orderBy('id', 'asc')->get();

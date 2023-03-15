@@ -13,7 +13,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $title = 'Badan Penangulangan Bencana Daerah | Kabupaten Batu Bara';
+        $title = 'Berita - Dinas Perumahan,Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
         $title2 = 'Semua Berita';
         $pagination = 9;
         $post = Berita::orderBy('id', 'desc')->latest()->paginate($pagination);
@@ -36,7 +36,7 @@ class PostController extends Controller
 
     public function dinas()
     {
-        $title = 'Badan Penangulangan Bencana Daerah | Kabupaten Batu Bara';
+        $title = 'Berita - Dinas Perumahan,Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
         $title2 = 'Kategori Dinas';
         $pagination = 9;
         $post_dinas = Berita::orderBy('id', 'desc')->where('kategori', '=', 'Dinas')->latest()->paginate($pagination);
@@ -48,7 +48,7 @@ class PostController extends Controller
 
     public function pemerintahan()
     {
-        $title = 'Badan Penangulangan Bencana Daerah | Kabupaten Batu Bara';
+        $title = 'Berita - Dinas Perumahan,Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
         $title2 = 'Kategori Pemerintahan';
         $pagination = 9;
         $post_pemerintahan = Berita::orderBy('id', 'desc')->where('kategori', '=', 'Pemerintahan')->latest()->paginate($pagination);
@@ -60,7 +60,7 @@ class PostController extends Controller
 
     public function umum()
     {
-        $title = 'Badan Penangulangan Bencana Daerah | Kabupaten Batu Bara';
+        $title = 'Berita - Dinas Perumahan,Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
         $title2 = 'Kategori Umum';
         $pagination = 9;
         $post_umum = Berita::orderBy('id', 'desc')->where('kategori', '=', 'Umum')->latest()->paginate($pagination);
