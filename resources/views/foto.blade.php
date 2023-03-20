@@ -37,7 +37,7 @@
             </ul>
         </div>
     </section>
-    {{-- <div class="portfolio section-content">
+    <div class="portfolio section-content">
         <div class="container-f">
             <div class="shadow-lg p-4">
                 <div class="section-title">
@@ -55,5 +55,5 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 @endsection
