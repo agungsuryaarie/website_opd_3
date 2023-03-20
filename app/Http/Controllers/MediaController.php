@@ -14,20 +14,21 @@ use Illuminate\Http\Request;
 
 class MediaController extends Controller
 {
-    public function index()
+    public function index(Request $request, Foto $id)
     {
         $title = 'Galeri Foto - Website Resmi Dinas Perumahan, Kawasan Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
-        $foto = Galeri::orderBy('id', 'desc')->latest()->paginate(9);
+        $foto = Galeri::orderBy('id', 'desc')->latest()->paginate(15);
+        $jml_foto = Foto::where('id')->where('galeri_id', $id)->count();
         $halaman = Halaman::orderBy('id', 'asc')->get();
         $layanan = Layanan::orderBy('id', 'asc')->get();
         $setting = Setting::first();
-        return view('foto', compact('title', 'foto', 'halaman', 'layanan', 'setting'));
+        return view('foto', compact('title', 'foto', 'halaman', 'layanan', 'setting', 'jml_foto'));
     }
 
     public function show($id)
     {
         $title = 'Galeri Foto - Website Resmi Dinas Perumahan, Kawasan Permukiman dan Lingkungan Hidup | Kabupaten Batu Bara';
-        $foto = Galeri::orderBy('id', 'desc')->first();
+        $foto = Galeri::orderBy('id', 'desc')->find($id);
         $detail = Foto::where('galeri_id', $id)->get();
         $halaman = Halaman::orderBy('id', 'asc')->get();
         $layanan = Layanan::orderBy('id', 'asc')->get();

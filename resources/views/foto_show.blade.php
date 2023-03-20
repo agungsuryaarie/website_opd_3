@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section id="portfolio" class="portfolio section-content">
+    <div class="portfolio section-content">
         <div class="container-f" data-aos="fade-up">
             <div class="shadow-lg p-4">
                 <div class="section-title">
@@ -24,5 +24,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 @endsection

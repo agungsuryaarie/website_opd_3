@@ -41,7 +41,7 @@
         <div class="container-f">
             <div class="row">
                 <div class="col-lg-4">
-                    <img src="{{ url('front/img/logo-white.png') }}" class="img-footer">
+                    <img src="{{ url('front/img/logo-white.png') }}" class="img-footer mb-6">
                 </div>
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Kategori Berita</h4>
@@ -94,7 +94,6 @@
         class="bi bi-arrow-up-short"></i></a>
 
 <div id="preloader">
-    <div class="line"></div>
 </div>
 
 
