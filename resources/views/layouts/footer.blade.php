@@ -1,45 +1,8 @@
-<!-- ======= Footer ======= -->
-{{-- <footer id="footer">
-
-    <div class="footer-top">
-        <div class="container-footer">
-            <div class="row-footer">
-                <div class="col-lg-4 col-md-6 footer-contact">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <img src="{{ url('front/img/logo-sipenaku-white.png') }}"class="img-fluid mb-3" style="width:45%"
-                            alt="">
-                    </div>
-                    <p></p>
-                </div>
-
-                <div class="col-lg-4 col-md-6 footer-newsletter">
-                    <h4>Pemerintah Kabupaten Batu bara</h4>
-                    <p>Jl. Perintis Kemerdekaan, Lima Puluh Kota, Kec. Lima Puluh, Kabupaten Batu Bara, Sumatera Utara
-                        21255</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="container-footer">
-        <div class="copyright-wrap d-md-flex py-4">
-            <div class="me-md-auto text-center text-md-start">
-                <div class="copyright">
-                    Copyright &copy; {{ date('Y') }} Bagian Keuangan Sekretariat Daerah Kabupaten Batu Bara. All
-                    rights
-                    reserved.
-                </div>
-            </div>
-        </div>
-    </div>
-</footer><!-- End Footer --> --}}
-<!-- ======= Footer ======= -->
 <footer id="footer">
 
     <div class="footer-top">
-        <div class="container-f">
-            <div class="row">
+        <div class="container">
+            <div class="row px-6">
                 <div class="col-lg-4">
                     <img src="{{ url('front/img/logo-white.png') }}" class="img-footer mb-6">
                 </div>
@@ -72,21 +35,22 @@
         </div>
     </div>
 
-    <div class="container-f">
-        <div class="copyright-wrap d-md-flex py-4">
-            <div class="me-md-auto text-center text-md-start">
-                <div class="copyright">
-                    Copyright &copy; <span>{{ $setting->nama_instansi }}</span>
+    <div class="container">
+        <div class="px-4">
+            <div class="copyright-wrap d-md-flex py-4">
+                <div class="me-md-auto text-center text-md-start">
+                    <div class="copyright">
+                        Copyright &copy; <span>{{ $setting->nama_instansi }}</span>
+                    </div>
+                </div>
+                <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
                 </div>
             </div>
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
-            </div>
         </div>
-
     </div>
 </footer><!-- End Footer -->
 
@@ -101,6 +65,8 @@
     integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
 <script src="{{ url('front/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- Vendor JS Files -->
 <script src="{{ url('front/vendor/purecounter/purecounter_vanilla.js') }}"></script>
@@ -109,10 +75,11 @@
 <script src="{{ url('front/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 <script src="{{ url('front/vendor/swiper/swiper-bundle.min.js') }}"></script>
 <script src="{{ url('front/vendor/php-email-form/validate.js') }}"></script>
+
 <!-- Template Main JS File -->
 <script src="{{ url('front/js/main.js') }}"></script>
 <script src="{{ url('front/DataTables/datatables.min.js') }}"></script>
-
+<script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>
 
 @yield('script')
 </body>

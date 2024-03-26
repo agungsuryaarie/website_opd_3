@@ -22,8 +22,11 @@ class HomeController extends Controller
         $link = Link::orderBy('id', 'desc')->get();
         $banner = Banner::orderBy('id', 'desc')->limit(1)->get();
         $post_dinas = Berita::orderBy('id', 'desc')->where('kategori', '=', 'Dinas')->limit(1)->get();
-        $post_pemerintahan = Berita::orderBy('id', 'desc')->where('kategori', '=', 'Pemerintahan')->limit(3)->get();
-        $post_latest = Berita::orderBy('id', 'desc')->where('kategori', '=', 'Dinas')->limit(5)->get();
+        $post_pemerintahan = Berita::orderBy('id', 'desc')->where('kategori', '=', 'Pemerintahan')->limit(1)->get();
+        $post_pemerintahan2 = Berita::orderBy('id', 'desc')->where('kategori', '=', 'Pemerintahan')->offset(1)->limit(2)->get();
+        $post_pemerintahan3 = Berita::orderBy('id', 'desc')->where('kategori', '=', 'Pemerintahan')->offset(3)->limit(2)->get();
+        $post_umum = Berita::orderBy('id', 'desc')->where('kategori', '=', 'Umum')->limit(6)->get();
+        $post_latest = Berita::orderBy('id', 'desc')->where('kategori', '=', 'Dinas')->offset(1)->limit(5)->get();
         $halaman = Halaman::orderBy('id', 'asc')->get();
         $layanan = Layanan::orderBy('id', 'asc')->get();
         $setting = Setting::first();
@@ -35,6 +38,9 @@ class HomeController extends Controller
             'post_dinas',
             'post_latest',
             'post_pemerintahan',
+            'post_pemerintahan2',
+            'post_pemerintahan3',
+            'post_umum',
             'halaman',
             'layanan',
             'setting'

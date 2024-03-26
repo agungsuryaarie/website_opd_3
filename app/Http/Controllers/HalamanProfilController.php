@@ -22,11 +22,4 @@ class HalamanProfilController extends Controller
         $setting = Setting::first();
         return view('halamanprofil', compact('title', 'halaman', 'profil', 'recent_post', 'layanan', 'setting', 'banner'));
     }
-
-    // public function profil(Halaman $halaman)
-    // {
-    //     $title = $halaman->title;
-    //     // $recent_post = Berita::limit(4)->get();;
-    //     return view('halamanprofil.show', compact('title', 'halaman'));
-    // }
 }
